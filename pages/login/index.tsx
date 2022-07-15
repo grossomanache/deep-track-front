@@ -2,9 +2,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import LoginForm from "../../src/components/LoginForm/LoginForm";
+import { UserState } from "../../src/redux/interfaces/UserInterfaces";
+import { useAppSelector } from "../../src/redux/store/hooks";
 import styles from "../../src/styles/Home.module.css";
 
 const Login: NextPage = () => {
+  const { name }: UserState = useAppSelector((state) => state.user);
+
   return (
     <div className={styles.container}>
       <Head>
