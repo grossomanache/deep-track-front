@@ -63,9 +63,6 @@ describe("Given the LoginForm component", () => {
       });
 
       const submitButton = screen.getByRole("button");
-      fireEvent.change(submitButton, {
-        target: { disabled: false },
-      });
 
       fireEvent.click(submitButton);
       expect(mockDispatch).toHaveBeenCalled();
