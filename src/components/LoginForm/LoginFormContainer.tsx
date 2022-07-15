@@ -6,6 +6,7 @@ export const LoginFormContainer = styled.div`
   border-radius: 15px;
   background-color: white;
   margin-top: 30px;
+  width: 300px;
 
   form {
     div {
