@@ -20,40 +20,26 @@
     "@mui/material": "^5.9.0",
     "@reduxjs/toolkit": "^1.8.3",
     "axios": "^0.27.2",
-    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
     "jwt-decode": "^3.1.2",
     "next": "12.2.2",
     "next-redux-wrapper": "^7.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.0.2",
-    "react-toastify": "^9.0.5"
+    "react-toastify": "^9.0.5",
+    "ts-jest": "^28.0.6",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
+    "@types/jest": "^28.1.5",
     "@types/node": "18.0.3",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.2",
     "husky": "^7.0.0",
+    "jest": "^28.1.3",
     "typescript": "4.7.4"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.ts",
-      "src/**/*.tsx",
-      "pages/**/*.ts",
-      "pages/**/*.tsx",
-      "!src/index.tsx",
-      "!src/reportWebVitals.ts",
-      "!src/setupTests.ts",
-      "!src/react-app-env.d.ts",
-      "!coverage/*/.ts",
-      "!src/redux/interfaces/*.ts",
-      "!src/**/*.test.ts",
-      "!src/**/*.test.ts.snap",
-      "!src/**/*.test.tsx.snap",
-      "!src/**/*.test.tsx.snap"
-    ]
   }
 }
