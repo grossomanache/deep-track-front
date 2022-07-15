@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { ToastContainer } from "react-toastify";
 import LoginForm from "../../src/components/LoginForm/LoginForm";
 import { UserState } from "../../src/redux/interfaces/UserInterfaces";
 import { useAppSelector } from "../../src/redux/store/hooks";
@@ -16,6 +17,7 @@ const Login: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <ToastContainer />
         <h1 className={styles.title}>Welcome to Deep Track</h1>
         <LoginForm />
       </main>
