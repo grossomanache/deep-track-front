@@ -1,6 +1,14 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
-import { ChangeEvent, FunctionComponent, useState, useEffect } from "react";
+import {
+  ChangeEvent,
+  FunctionComponent,
+  useState,
+  useEffect,
+  FormEvent,
+} from "react";
 import { LoginUser } from "../../redux/interfaces/UserInterfaces";
+import { useAppDispatch } from "../../redux/store/hooks";
+import { loginUserThunk } from "../../redux/thunks/userThunks/userThunks";
 
 const LoginForm: FunctionComponent = (): JSX.Element => {
   const formInitialState = { username: "", password: "" } as LoginUser;
@@ -8,12 +16,20 @@ const LoginForm: FunctionComponent = (): JSX.Element => {
   const [formData, setFormData] = useState(formInitialState);
   const [buttonDisabled, setButtonDisabled] = useState(true);
 
+  const dispatch = useAppDispatch();
+
   const changeData = (event: ChangeEvent<HTMLInputElement>): void => {
     setFormData({ ...formData, [event.target.id]: event.target.value });
   };
 
   const resetForm = (): void => {
     setFormData(formInitialState);
+  };
+
+  const loginUser = (event: FormEvent<HTMLFormElement>): void => {
+    event.preventDefault();
+    dispatch(loginUserThunk(formData));
+    resetForm();
   };
 
   useEffect(() => {
@@ -30,6 +46,7 @@ const LoginForm: FunctionComponent = (): JSX.Element => {
         component="form"
         noValidate
         autoComplete="off"
+        onSubmit={loginUser}
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
         <Typography component="h1" variant="h5">

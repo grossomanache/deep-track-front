@@ -11,3 +11,9 @@ export interface UserData {
 export interface UserState extends UserData {
   logged: boolean;
 }
+
+export interface ApiLoginResponse {
+  data: { token: string };
+}
+
+export type Token = string | null;
