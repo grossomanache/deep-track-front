@@ -1,7 +1,13 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
+import { LoginUser } from "../../redux/interfaces/UserInterfaces";
 
 const LoginForm: FunctionComponent = (): JSX.Element => {
+  const formInitialState = { username: "", password: "" } as LoginUser;
+
+  const [formData, setFormData] = useState(formInitialState);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+
   return (
     <>
       <Box
