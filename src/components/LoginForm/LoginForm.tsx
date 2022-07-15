@@ -55,7 +55,7 @@ const LoginForm: FunctionComponent = (): JSX.Element => {
         <TextField
           required
           name="username"
-          label="Username"
+          label="username"
           type="text"
           id="username"
           value={formData.username}
@@ -64,7 +64,7 @@ const LoginForm: FunctionComponent = (): JSX.Element => {
         <TextField
           required
           name="password"
-          label="Password"
+          label="password"
           type="password"
           id="password"
           value={formData.password}
