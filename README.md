@@ -21,6 +21,6 @@ Keep track of key lead measures on a daily basis and provide a summarized scoreb
 <img src="https://iconape.com/wp-content/files/gj/370774/svg/370774.svg" title="Cypress" alt="Cypress" width="40" height="40"/>&nbsp;
 
 ## Relevant links
-### Site: https://deep-track-front.vercel.app/
-### Back-end: https://github.com/grossomanache/deep-track-back
+### Site: https://deep-track.vercel.app/
+### Back-end: https://github.com/grossomanache/deep-track-back-ts
 
